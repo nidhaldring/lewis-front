@@ -13,10 +13,10 @@ export default function Orders() {
     <div className="flex flex-col flex-grow" style={{ height: "75%" }}>
       <div className="flex justify-end px-4 items-center h-12 border">
         <div className="w-16 flex justify-between">
-          <div className="small-icon">
+          <div className="small-icon text-noir">
             <Icon path={mdiReload} size={1}></Icon>
           </div>
-          <div className="small-icon">
+          <div className="small-icon text-noir">
             <UnfoldIcon items={unfoldMenuItems}></UnfoldIcon>
           </div>
         </div>

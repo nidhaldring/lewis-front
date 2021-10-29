@@ -9,9 +9,12 @@ module.exports = {
         bleu: "#217ed1",
         grayish: "#f5f5f5",
         darkGray: "#9e9e9e",
+        greenish: "#71b02f",
+        noir: "#616161",
+        greenish: "#71b02f",
       },
       margin: {
-        "-72": "-68rem",
+        "-72": "-100rem",
       },
     },
   },

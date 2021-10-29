@@ -14,15 +14,15 @@ function App() {
         <div className="flex-grow flex overflow-hidden">
           <div
             className={`${
-              isOpen ? "w-full" : "w-3/5"
+              isOpen ? "hidden sm:block sm:w-3/5" : "w-full"
             } transition-all duration-300`}
           >
             <Home></Home>
           </div>
           <div
             className={`${
-              isOpen ? "-mr-72" : "w-2/5"
-            } transition-all duration-300`}
+              isOpen ? "w-full" : "hidden sm:block sm:-mr-72"
+            } sm:w-2/5 transition-all duration-300`}
           >
             <SideBar></SideBar>
           </div>
