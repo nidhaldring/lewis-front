@@ -17,6 +17,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { v4 as uuidv4 } from "uuid";
 import Menu from "./menu";
 import logo from "./logo.png";
+import { open } from "../store/slices/sideMenu";
 
 function ProductAttribute({
   label,
@@ -150,7 +151,15 @@ export default function NavBar() {
       className="flex bg-primary justify-between p-4"
       style={{ height: "72px" }}
     >
-      <img src={logo} alt="logo" className="w-9 h-9 cursor-pointer"></img>
+      <img
+        src={logo}
+        alt="logo"
+        className="w-9 h-9 cursor-pointer"
+        onClick={(e) => {
+          e.stopPropagation();
+          dispatch(open());
+        }}
+      ></img>
       <div className="flex items-center px-2 sm:px-6 w-3/5 sm:w-1/2 h-10  bg-secondary rounded-sm nav-search">
         <SearchIcon width="24px" height="24px"></SearchIcon>
         <input

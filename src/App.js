@@ -1,15 +1,22 @@
 import { BrowserRouter as Router } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import NavBar from "./navbar";
+import SideMenu from "./sidemenu";
+import { close } from "./store/slices/sideMenu";
 import SideBar from "./sidebar";
 import Home from "./home";
 
 function App() {
   const isOpen = useSelector((state) => state.sideBar.isOpen);
+  const dispatch = useDispatch();
 
   return (
     <Router>
-      <div className="flex flex-col h-full">
+      <SideMenu></SideMenu>
+      <div
+        className={`flex flex-col  ${isOpen ? "ml-64" : ""}`}
+        onClick={() => dispatch(close())}
+      >
         <NavBar></NavBar>
         <div className="flex-grow flex overflow-hidden">
           <div

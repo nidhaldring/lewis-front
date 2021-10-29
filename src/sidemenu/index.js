@@ -2,8 +2,9 @@ import { useSelector } from "react-redux";
 
 export default function SideMenu() {
   const isOpen = useSelector((state) => state.sideMenu.isOpen);
+
   return (
-    <div id="mySidebar" class={`${isOpen ? "w-80" : "w-0"}sidebar}`}>
+    <div id="mySidebar" class={`sidebar ${isOpen ? "w-80" : "w-0"} `}>
       <div class="headerSideBar">
         <div class="contentHeaderSideBar">
           <div class="contentIcon">
